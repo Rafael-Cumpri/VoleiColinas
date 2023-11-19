@@ -165,7 +165,8 @@ function getPlayerLevel(playerName) {
     'Peixoto': 3,
     'Ryan': 3,
     'Maria': 3,
-    'Oliveira': 4
+    'Oliveira': 4,
+    'Pedro': 3,
   };
 
   return fixedPlayersLevels[playerName] || 1; // Se o jogador não estiver na lista, atribui nível 1

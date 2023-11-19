@@ -142,6 +142,41 @@ function getSelectedPlayers() {
   return selectedPlayers;
 }
 
+function fixedPlayersList() {
+  let html = '';
+
+  const fixedPlayersLevels = {
+    'Raillan': 5,
+    'Cumpri': 5,
+    'Candido': 5,
+    'Jotape': 5,
+    'Luciano': 5,
+    'Andrew': 5,
+    'Gabriel': 5,
+    'Hyago': 5,
+    'Nathan': 5,
+    'Fe': 5,
+    'Ellen': 4,
+    'Maria': 4,
+    'Lara': 4,
+    'Lissie A.': 4,
+    'Oliveira': 4,
+    'Pc': 3,
+    'Peixoto': 3,
+    'Raianne': 3,
+    'Cidinha': 3,
+    'Ryan': 3,
+    'Maria': 3,
+    'Pedro': 3
+  }
+
+  for (let playerName in fixedPlayersLevels) {
+    html += `<li><label><input type="checkbox" value="${playerName}" /> ${playerName} - Nível: ${fixedPlayersLevels[playerName]}</label></li>`;
+  }
+
+  document.getElementById('fixedPlayersList').innerHTML = html;
+}
+
 function getPlayerLevel(playerName) {
   // Defina os níveis dos jogadores fixos conforme necessário
   const fixedPlayersLevels = {

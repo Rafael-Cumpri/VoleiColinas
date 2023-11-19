@@ -1,0 +1,188 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.header {
+  background-color: #ffcc29;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-container label {
+  margin-bottom: 5px;
+}
+
+.input-container input {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.input-container button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.input-container button:hover {
+  background-color: #45a049;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.player-list-container {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.player-list-container:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.fixed-players-container {
+  margin-top: 20px;
+}
+
+.fixed-players-container h2 {
+  color: #333;
+}
+
+.fixed-players-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.fixed-players-container li {
+  margin-bottom: 8px;
+}
+
+.fixed-players-container label {
+  display: block;
+  padding: 8px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.fixed-players-container input {
+  margin-right: 8px;
+}
+
+.result-container {
+  text-align: center;
+}
+
+.result-container button {
+  background-color: #ffcc29;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.result-container button:hover {
+  background-color: #e69500;
+}
+
+.result-container #result {
+  margin-top: 20px;
+}
+
+/* Estilos para a lista de jogadores */
+#playerList {
+  list-style: none;
+  padding: 0;
+}
+
+#playerList li {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  padding: 10px;
+  cursor: grab;
+}
+
+/* Efeito de sombra nos itens da lista ao serem arrastados */
+#playerList li:active {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para os times sorteados */
+.team {
+  background-color: #e0e0e0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.team h3 {
+  margin-bottom: 10px;
+}
+
+/* Efeito de sombra nos times ao serem arrastados */
+.team:active {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para a lista de jogadores na formação dos times */
+.team p {
+  margin: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 8px;
+  cursor: grab;
+}
+
+/* Efeito de sombra nos jogadores ao serem arrastados */
+.team p:active {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos adicionais para tornar o arrastar funcional em dispositivos móveis */
+.team p.touch-drag {
+  touch-action: manipulation;
+}
+
+
+
+/* Estilos adicionais para telas pequenas (até 600 pixels) */
+@media only screen and (max-width: 600px) {
+  .header {
+    padding: 10px;
+  }
+
+  .input-container button {
+    width: 100%;
+  }
+}

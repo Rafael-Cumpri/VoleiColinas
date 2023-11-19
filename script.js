@@ -10,7 +10,6 @@ const fixedPlayers = {
   'Nathan': 5,
   'Fe': 5,
   'Ellen': 4,
-  'Maria': 4,
   'Lara': 4,
   'Lissie A.': 4,
   'Oliveira': 4,
@@ -20,6 +19,7 @@ const fixedPlayers = {
   'Cidinha': 3,
   'Ryan': 3,
   'Pedro': 3,
+  'Maria': 3,
 }
 
 let players = [];

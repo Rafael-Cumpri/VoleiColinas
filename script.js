@@ -166,7 +166,6 @@ function fixedPlayersList() {
     'Raianne': 3,
     'Cidinha': 3,
     'Ryan': 3,
-    'Maria': 3,
     'Pedro': 3
   }
 
@@ -183,25 +182,24 @@ function getPlayerLevel(playerName) {
     'Raillan': 5,
     'Cumpri': 5,
     'Candido': 5,
-    'Ellen': 4,
     'Jotape': 5,
     'Luciano': 5,
     'Andrew': 5,
     'Gabriel': 5,
-    'Cidinha': 3,
-    'Maria': 4,
-    'Raianne': 3,
-    'Lara': 4,
     'Hyago': 5,
     'Nathan': 5,
-    'Lissie A.': 4,
-    'Pc': 3,
     'Fe': 5,
-    'Peixoto': 3,
-    'Ryan': 3,
-    'Maria': 3,
+    'Ellen': 4,
+    'Maria': 4,
+    'Lara': 4,
+    'Lissie A.': 4,
     'Oliveira': 4,
-    'Pedro': 3,
+    'Pc': 3,
+    'Peixoto': 3,
+    'Raianne': 3,
+    'Cidinha': 3,
+    'Ryan': 3,
+    'Pedro': 3
   };
 
   return fixedPlayersLevels[playerName] || 1; // Se o jogador não estiver na lista, atribui nível 1

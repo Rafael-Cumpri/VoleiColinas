@@ -174,7 +174,124 @@ body {
   touch-action: manipulation;
 }
 
+/* Adicione no seu arquivo style.css */
 
+#volleyballScoreboard {
+  display: none;
+  text-align: center;
+}
+
+.score {
+  display: inline-block;
+  margin: 20px;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.score h2 {
+  margin-bottom: 10px;
+}
+
+.score button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.score button:hover {
+  background-color: #45a049;
+}
+
+#resetButtonContainer button {
+  background-color: #f44336;
+}
+
+#resetButtonContainer button:hover {
+  background-color: #d32f2f;
+}
+
+#volleyballScoreboard {
+  display: none;
+  text-align: center;
+}
+
+#flexContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.score {
+  flex: 1;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+#team1Card {
+  background-color: #3498db; /* Cor do Time 1 */
+}
+
+#team2Card {
+  background-color: #e7d93c; /* Cor do Time 2 */
+}
+
+.score button {
+  background-color: #2ecc71; /* Cor dos botões */
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.score button:hover {
+  background-color: #27ae60; /* Cor dos botões ao passar o mouse */
+}
+
+#resetButtonContainer button {
+  background-color: #e74c3c; /* Cor do botão de reset */
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+#resetButtonContainer button:hover {
+  background-color: #c0392b; /* Cor do botão de reset ao passar o mouse */
+}
+
+#backToDrawButton {
+  background-color: #f39c12; /* Cor do botão de voltar */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#backToDrawButton:hover {
+  background-color: #d35400; /* Cor do botão de voltar ao passar o mouse */
+}
+
+#removeButton {
+  background-color: #e74c3c; /* Cor do botão de remover */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
 
 /* Estilos adicionais para telas pequenas (até 600 pixels) */
 @media only screen and (max-width: 600px) {
@@ -184,5 +301,11 @@ body {
 
   .input-container button {
     width: 100%;
+  }
+
+  #flexContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
   }
 }

@@ -170,3 +170,53 @@ function getPlayerLevel(playerName) {
 
   return fixedPlayersLevels[playerName] || 1; // Se o jogador não estiver na lista, atribui nível 1
 }
+
+function switchToTeamDraw() {
+    // Oculta o placar de vôlei
+    document.getElementById('volleyballScoreboard').style.display = 'none';
+
+    // Exibe o conteúdo de sortear times
+    document.getElementById('mainContent').style.display = 'block';
+  }
+
+  let team1Score = 0;
+  let team2Score = 0;
+  
+  function addPoint(team) {
+    if (team === 1) {
+      team1Score++;
+      updateScoreboard();
+    } else if (team === 2) {
+      team2Score++;
+      updateScoreboard();
+    }
+  }
+  
+  function removePoint(team) {
+    if (team === 1 && team1Score > 0) {
+      team1Score--;
+      updateScoreboard();
+    } else if (team === 2 && team2Score > 0) {
+      team2Score--;
+      updateScoreboard();
+    }
+  }
+  
+  function resetScore() {
+    team1Score = 0;
+    team2Score = 0;
+    updateScoreboard();
+  }
+  
+  function updateScoreboard() {
+    document.getElementById('team1Score').innerHTML = `<p>Pontos: ${team1Score}</p>`;
+    document.getElementById('team2Score').innerHTML = `<p>Pontos: ${team2Score}</p>`;
+  }
+
+  function showVolleyballScoreboard() {
+    // Oculta o conteúdo de sortear times
+    document.getElementById('mainContent').style.display = 'none';
+
+    // Exibe o placar de vôlei
+    document.getElementById('volleyballScoreboard').style.display = 'block';
+  }

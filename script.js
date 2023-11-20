@@ -142,7 +142,7 @@ function createPlayerListItem(player) {
   const li = document.createElement('li');
   li.draggable = true;
   li.dataset.playerId = player.id;
-  li.innerHTML = `${player.name} - Nível: ${player.level}`;
+  li.innerHTML = `${player.name}`;
   li.addEventListener('dragstart', handleDragStart);
   return li;
 }
@@ -172,7 +172,7 @@ function fixedPlayersList() {
   const fixedPlayersLevels = fixedPlayers
 
   for (let playerName in fixedPlayersLevels) {
-    html += `<li><label><input type="checkbox" value="${playerName}" /> ${playerName} - Nível: ${fixedPlayersLevels[playerName]}</label></li>`;
+    html += `<li><label><input type="checkbox" value="${playerName}" /> ${playerName}</label></li>`;
   }
 
   document.getElementById('fixedPlayersList').innerHTML = html;

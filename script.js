@@ -6,7 +6,7 @@ const fixedPlayers = {
   'Luciano': 5,
   'Andrew': 5,
   'Gabriel': 5,
-  'Hyago': 5,
+  'Hyago': 4,
   'Nathan': 5,
   'Fe': 5,
   'Ellen': 4,
@@ -16,10 +16,10 @@ const fixedPlayers = {
   'Pc': 3,
   'Peixoto': 3,
   'Raianne': 3,
-  'Cidinha': 3,
+  'Cidinha': 2,
   'Ryan': 3,
   'Pedro': 3,
-  'Maria': 3,
+  'Maria': 2,
 }
 
 let players = [];
@@ -69,8 +69,26 @@ function createTeams(players) {
   const teams = [];
 
   for (let i = 0; i < numberOfTeams; i++) {
-    teams.push(shuffledPlayers.slice(i * 6, (i + 1) * 6));
+    teams.push([]);
   }
+
+  // Agrupa os jogadores por nível
+  const playersByLevel = {};
+  shuffledPlayers.forEach(player => {
+    if (!playersByLevel[player.level]) {
+      playersByLevel[player.level] = [];
+    }
+    playersByLevel[player.level].push(player);
+  });
+
+  // Distribui os jogadores para os times mantendo o equilíbrio
+  Object.values(playersByLevel).forEach(playersArray => {
+    let teamIndex = 0;
+    playersArray.forEach(player => {
+      teams[teamIndex].push(player);
+      teamIndex = (teamIndex + 1) % numberOfTeams;
+    });
+  });
 
   return teams;
 }
@@ -99,7 +117,7 @@ function displayTeams(teams) {
     team.forEach((player, playerIndex) => {
       const playerInfo = document.createElement('p');
       playerInfo.classList.add('touch-drag');
-      playerInfo.textContent = `${player.name} - Nível: ${player.level}`;
+      playerInfo.textContent = `${player.name}`;
       playerInfo.draggable = true;
       playerInfo.dataset.teamIndex = index;
       playerInfo.dataset.playerIndex = playerIndex;

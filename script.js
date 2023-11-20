@@ -20,6 +20,14 @@ const fixedPlayers = {
   'Ryan': 3,
   'Pedro': 3,
   'Maria': 2,
+  'Carol': 3,
+  'Stefani': 3,
+  'Victor': 3,
+  'Eduardo': 3,
+  'Gabi H': 3,
+  'Nathalia': 4,
+  'Marcia': 3,
+  'Juliana': 3,
 }
 
 let players = [];
